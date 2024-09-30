@@ -8,7 +8,7 @@
   --footer-text-color: #888;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --background-color: #222;
   --btn-color: #fff;
   --btn-text-color: #222;
@@ -28,7 +28,8 @@ body {
 #root {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  /* gap: 60px; */
+  gap: 200px;
 }
 
 h1,
@@ -43,7 +44,7 @@ p {
 h2,
 h3,
 p {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 h1,
@@ -57,7 +58,7 @@ h3 {
 }
 
 h1 {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 32px;
 }
 
@@ -76,7 +77,8 @@ p {
 
 @media (width >= 800px) {
   #root {
-    gap: 100px;
+    /* gap: 100px; */
+    gap: 200px;
   }
   h1 {
     font-size: 40px;
