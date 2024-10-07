@@ -1,5 +1,6 @@
 import styles from "./ProjectsStyles.module.css";
 import amzn from "../../assets/amzn.png";
+import gungame from "../../assets/gungame.png";
 import todl from "../../assets/todl.png";
 import wapp from "../../assets/wapp.png";
 import ProjectCard from "../../common/ProjectCard";
@@ -9,6 +10,12 @@ function Projects() {
     <section id="projects" className={styles.container}>
       <h1 className="sectionTitle">Personal Projects</h1>
       <div className={styles.projectsContainer}>
+        <ProjectCard
+          src={gungame}
+          link="https://sar1911.itch.io/gun-game"
+          h3="Gun Game"
+          p="Made with Unity Engine"
+        />
         <ProjectCard
           src={amzn}
           link="https://sarth-amz.netlify.app"
