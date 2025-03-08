@@ -15,7 +15,7 @@ function Projects() {
           src={DSC}
           link="https://github.com/Sar1911/DualSenseCompanion"
           h3="DualSense Companion"
-          p="PS5 -> X360 controller emulator."
+          p="PS5 -> X360 controller emulator"
         />
         <ProjectCard
           src={gungame}
