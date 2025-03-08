@@ -37,7 +37,7 @@ function Hero() {
           <br />
           Sharma
         </h1>
-        <h2>Frontend Developer</h2>
+        <h2>Software Developer</h2>
         <span>
           <a href="https://github.com/Sar1911" target="_blank">
             <img src={githubIcon} alt="Github icon" />
@@ -47,8 +47,8 @@ function Hero() {
           </a>
         </span>
         <p className={styles.description}>
-          Self taught, quick learner with a passion for developing modern web
-          apps.
+          Self-taught developer with a passion for building modern and
+          user-friendly applications.
         </p>
         <a href={CV} download>
           <button className="hover">Resume</button>
