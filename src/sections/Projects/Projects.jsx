@@ -1,6 +1,7 @@
 import styles from "./ProjectsStyles.module.css";
 import amzn from "../../assets/amzn.png";
 import gungame from "../../assets/gungame.png";
+import DSC from "../../assets/dsc.png";
 import todl from "../../assets/todl.png";
 import wapp from "../../assets/wapp.png";
 import ProjectCard from "../../common/ProjectCard";
@@ -10,6 +11,12 @@ function Projects() {
     <section id="projects" className={styles.container}>
       <h1 className="sectionTitle">Personal Projects</h1>
       <div className={styles.projectsContainer}>
+        <ProjectCard
+          src={DSC}
+          link="https://github.com/Sar1911/DualSenseCompanion"
+          h3="DualSense Companion"
+          p="PS5 -> X360 controller emulator."
+        />
         <ProjectCard
           src={gungame}
           link="https://sar1911.itch.io/gun-game"
