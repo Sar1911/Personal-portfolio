@@ -1,0 +1,155 @@
+:root {
+  --card-bg: var(--project-card-bg, #ffffff);
+  --card-border: rgba(20, 20, 24, 0.08);
+  --card-shadow: rgba(20, 20, 24, 0.08);
+  --card-shadow-hover: rgba(20, 20, 24, 0.14);
+  --card-index: #9a9aa6;
+  --card-accent-1: #6c5ce7;
+  --card-accent-2: #00b894;
+  --image-bg: rgba(20, 20, 24, 0.03);
+}
+
+[data-theme="dark"],
+.dark {
+  --card-bg: var(--project-card-bg, #1c1c22);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: rgba(0, 0, 0, 0.55);
+  --card-index: #6b6b76;
+  --card-accent-1: #9b8cff;
+  --card-accent-2: #2dd4a7;
+  --image-bg: rgba(255, 255, 255, 0.04);
+}
+
+/* ---- Card ---- */
+.card {
+  position: relative;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  text-decoration: none;
+  color: var(--card-title);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 320px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px var(--card-shadow);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+/* Signature: soft two-color glow that only appears on hover */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 18px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    var(--card-accent-1),
+    var(--card-accent-2)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px var(--card-shadow-hover);
+}
+
+.card:hover::before,
+.card:focus-visible::before {
+  opacity: 1;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--card-accent-1);
+  outline-offset: 3px;
+}
+
+/* ---- Image ---- */
+.imageWrap {
+  background-color: var(--image-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 28px 0;
+}
+
+.image {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* ---- Body (no card padding; margins live on the text instead) ---- */
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 24px 26px;
+}
+
+.index {
+  font-family: "SF Mono", "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--card-index);
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--card-title);
+  margin: 0 0 4px;
+}
+
+.tagline {
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--card-tagline);
+  margin: 0 0 14px;
+}
+
+.projectDescription {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--card-description);
+  margin: 0;
+  max-width: 25ch;
+}
+
+/* ---- Desktop / tablet ---- */
+@media (width >= 800px) {
+  .card {
+    flex: 1 1 300px;
+    max-width: 350px;
+  }
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card::before {
+    transition: none;
+  }
+}

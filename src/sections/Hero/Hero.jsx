@@ -47,8 +47,8 @@ function Hero() {
           </a>
         </span>
         <p className={styles.description}>
-          Self-taught developer with a passion for building modern and
-          user-friendly applications.
+          Software Developer focused on scalable backend systems, responsive
+          frontends, and modern web technologies.
         </p>
         <a href={CV} download>
           <button className="hover">Resume</button>
