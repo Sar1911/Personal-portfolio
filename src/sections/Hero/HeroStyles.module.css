@@ -42,7 +42,9 @@
     font-size: 20px;
     font-weight: bold;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+    transition:
+      box-shadow 200ms ease-in-out,
+      transform 200ms ease-in-out;
   }
 
   button:hover {
@@ -63,6 +65,7 @@
   position: absolute;
   right: 0;
   width: 25px;
+  padding-right: 30px;
 }
 
 .colorMode:hover {
@@ -90,6 +93,10 @@
       max-width: 350px;
       width: 350px;
     }
+  }
+
+  .colorMode {
+    padding-right: 0px;
   }
 }
 
